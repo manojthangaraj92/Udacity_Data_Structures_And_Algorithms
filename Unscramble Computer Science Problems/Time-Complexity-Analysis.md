@@ -47,13 +47,13 @@ In this task,
  ## Task4
 
  In this task, 
- O(n) for creating outgoing calls
- O(n) for creating outgoing texts
- O(n) for creating incoming calls
- O(n) for creating incoming texts
- O(1) for creating the empty list
- O(n) for looping through the outgoing calls list list
- O(n log n) for sorting the my_list
- O(n) for looping through the final telemarketing numbers.
+ - O(n) for creating outgoing calls
+ - O(n) for creating outgoing texts
+ - O(n) for creating incoming calls
+ - O(n) for creating incoming texts
+ - O(1) for creating the empty list
+ - O(n) for looping through the outgoing calls list list
+ - O(n log n) for sorting the my_list
+ - O(n) for looping through the final telemarketing numbers.
 
  Total time complexity = O(n+n+n+1+n*log n+n) = O(n log n)
