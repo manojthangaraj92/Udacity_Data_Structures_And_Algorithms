@@ -16,10 +16,11 @@ In this task,
 
  In this task,
 
- - O(n) for finding the maximum duration
- - O(n) for finding the record in which the maximum duration is found.
-
- Total time complexity = O(n+n) = O(n)
+ - O(1) for empty dictionary
+ - O(n) for looping through the calls
+ - O(n) for getting the max time
+ 
+ Total time complexity = O(1+n+n) = O(n)
 
  ## Task3:
 

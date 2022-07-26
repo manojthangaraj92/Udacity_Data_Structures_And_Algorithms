@@ -20,13 +20,23 @@ Print a message:
 September 2016.".
 """
 
-def max_duration(items):                              
-    max_item = max([int(item[3]) for item in items])    #O(n)
-    for i in items:                                     #O(n)
-        if int(i[3]) == max_item:
-            return i
-            break
+def get_val(items):
+    my_dict = {}     #O(1)
+    for item in items:       #O(n)
+        if item[0] in my_dict:
+            my_dict[item[0]] += int(item[3])
         else:
-            continue
-result = max_duration(calls)
-print(f'{result[1]} spent the longest time, {result[3]} seconds, on the phone during September 2016.')
+            my_dict[item[0]] = int(item[3])
+            
+        if item[1] in my_dict:
+            my_dict[item[1]] += int(item[3])
+        else:
+            my_dict[item[1]] = int(item[3])
+            
+    return my_dict
+
+result = get_val(calls)
+
+max_time = max(zip(result.values(), result.keys()))           #O(n)
+
+print(f'{max_time[1]} spent the longest time, {max_time[0]} seconds, on the phone during September 2016.')
