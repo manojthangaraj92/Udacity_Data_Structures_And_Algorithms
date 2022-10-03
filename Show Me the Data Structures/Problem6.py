@@ -123,7 +123,7 @@ if __name__ == "__main__":
     print("Union")
     print(union(linked_list_1, linked_list_2))
     print("Intersection")
-    print(intersection(linked_list_1, linked_list_2))
+    print(intersection(linked_list_1, linked_list_2)) #THE SHOULD BE AN NUMBER IF RANDOM GENERATED NUMBERS ARE EQUAL
 
     # Test case 2
     linked_list_1 = LinkedList()
@@ -159,7 +159,7 @@ if __name__ == "__main__":
     print("Union")
     print(union(linked_list_1, linked_list_2))
     print("Intersection")
-    print(intersection(linked_list_1, linked_list_2))
+    print(intersection(linked_list_1, linked_list_2)) #there should not be any intersection
 
 
 

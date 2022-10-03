@@ -126,3 +126,5 @@ if __name__ == "__main__":
 
     print("Pass" if (our_cache.get(7) == 7) else "Fail")
     print("Pass" if (our_cache.get(1) == -1) else "Fail")
+
+    #all test cases should pass

@@ -44,7 +44,7 @@ if __name__ == "__main__":
     # Test Case 1
     path = './testdir'
     pathFiles = find_files('c', path)
-    print(pathFiles)
+    print(pathFiles) #should return all c files in the directory
 
     # Test Case 2
     print(find_files("", ".")) #should return empty

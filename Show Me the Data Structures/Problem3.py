@@ -125,7 +125,7 @@ if __name__ == "__main__":
     x = huffman_encoding('AAABBBBBBCCCDDFFEEDDAAWW')
     print(x[0])
     y = huffman_decoding(x[0],x[1])
-    print(y)
+    print(y) #should reutrn the exact same letters
 
     # Test Case 2
     one_letter_sentence = huffman_encoding("AAAAAAAAAAA")

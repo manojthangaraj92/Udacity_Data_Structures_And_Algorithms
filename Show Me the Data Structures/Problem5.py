@@ -76,7 +76,7 @@ if __name__ == "__main__":
     # Test case 1
     data = 'Hello Block'
     block = Block(data, 0)
-    print(block)
+    print(block)    #just return the single block with its hash
 
     # Test case 2
     blockchain = BlockChain()
@@ -88,7 +88,7 @@ if __name__ == "__main__":
     blockchain.append("Apricot")
     blockchain.append("Rasberry")
 
-    print(blockchain.get_block_nodes())
+    print(blockchain.get_block_nodes()) #should return all the elements appended
 
     # Test case 3
     blockchain = BlockChain()
