@@ -74,3 +74,8 @@ if __name__ == "__main__":
     test_function([[6, 7, 8, 1, 2, 3, 4], 8])
     test_function([[6, 7, 8, 1, 2, 3, 4], 1])
     test_function([[6, 7, 8, 1, 2, 3, 4], 10])
+    test_function([[-7, -6, -5, -4, -3, -2, -1, -10, -9, -8], -9])
+    test_function([[], 20])
+
+    ## All test cases should pass
+

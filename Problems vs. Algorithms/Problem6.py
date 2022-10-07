@@ -4,7 +4,8 @@
 
 """
 Max and Min in a Unsorted Array
-In this problem, we will look for smallest and largest integer from a list of unsorted integers. The code should run in O(n) time. Do not use Python's inbuilt functions to find min and max.
+In this problem, we will look for smallest and largest integer from a list of unsorted integers. The code should run in O(n) time.
+Do not use Python's inbuilt functions to find min and max.
 
 Bonus Challenge: Is it possible to find the max and min in a single traversal?
 """
@@ -15,6 +16,8 @@ def get_min_max(ints):
     Args:
        ints(list): list of integers containing one or more integers
     """
+    if len(ints) == 0:
+        return None
     minimum = ints[0]
     maximum = 0
     for number in ints:
@@ -26,11 +29,22 @@ def get_min_max(ints):
     return (minimum, maximum)
 
 
+if __name__ == "__main__":
+    ## Example Test Case of Ten Integers
+    import random
 
-## Example Test Case of Ten Integers
-import random
+    l = [i for i in range(0, 10)]  # a list containing 0 - 9
+    random.shuffle(l)
+    print ("Pass" if ((0, 9) == get_min_max(l)) else "Fail")
 
-l = [i for i in range(0, 10)]  # a list containing 0 - 9
-random.shuffle(l)
+    l = [random.randint(10,1000) for i in range(10)]
+    random.shuffle(l)
+    print("Pass" if (min(l),max(l)) == get_min_max(l) else "fail")
 
-print ("Pass" if ((0, 9) == get_min_max(l)) else "Fail")
+    l = [-25,-20,-15,-100,0,2,-999]
+    print("Pass" if (min(l), max(l)) == get_min_max(l) else "fail")
+
+    l = []
+    output = None
+    print("Pass" if output == get_min_max(l) else "Fail")
+
