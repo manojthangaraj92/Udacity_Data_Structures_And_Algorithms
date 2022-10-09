@@ -75,14 +75,16 @@ def test_function(test_case):
 
 
 if __name__ == "__main__":
-
+    #Test case 1
     test_function([[1, 2, 3, 4, 5], [542, 31]])
     test_case = [[4, 6, 2, 5, 9, 8], [964, 852]]
     test_function(test_case) # These test cases should pass
 
+    #Test case 2 Edge case
     test_case = [[], []]
     test_function(test_case)  # These test cases should pass
 
+    #Test case 3 Edge case
     test_case = [[0], [0]]
     test_function(test_case)  # These test cases should pass
 

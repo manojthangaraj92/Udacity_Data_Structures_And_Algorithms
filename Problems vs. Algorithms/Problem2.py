@@ -69,12 +69,19 @@ def test_function(test_case):
 
 
 if __name__ == "__main__":
+    #Test case 1
     test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 6])
+    # Test case 2
     test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 1])
+    # Test case 3
     test_function([[6, 7, 8, 1, 2, 3, 4], 8])
+    # Test case 4
     test_function([[6, 7, 8, 1, 2, 3, 4], 1])
+    # Test case 5
     test_function([[6, 7, 8, 1, 2, 3, 4], 10])
+    # Test case 6 Edge case
     test_function([[-7, -6, -5, -4, -3, -2, -1, -10, -9, -8], -9])
+    # Test case 7 Edge case
     test_function([[], 20])
 
     ## All test cases should pass

@@ -49,8 +49,14 @@ def test_function(test_case):
 
 
 if __name__ == "__main__":
+
+    #Test case 1
     test_function([0, 0, 2, 2, 2, 1, 1, 1, 2, 0, 2])
+    #Test case 2
     test_function([2, 1, 2, 0, 0, 2, 1, 0, 1, 0, 0, 2, 2, 2, 1, 2, 0, 0, 0, 2, 1, 0, 2, 0, 0, 1])
+    #Test case 3
     test_function([0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2])
+    #Test case 4 Edge case
     test_function([0])
+    # Test case 5 Edge case
     test_function([])

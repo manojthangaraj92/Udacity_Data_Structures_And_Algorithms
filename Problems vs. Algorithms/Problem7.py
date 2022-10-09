@@ -58,8 +58,10 @@ class Router:
     # You will need to split the path and pass the pass parts
     # as a list to the RouteTrie
     def add_handler(self, str_path, handler):
-        path = self.split_path(str_path)
-        self.router.insert(path,handler)
+        if isinstance(str_path,str) and (str_path != ""):
+            path = self.split_path(str_path)
+            self.router.insert(path,handler)
+        print("Path Type Invalid")
 
     # lookup path (by parts) and return the associated handler
     # you can return None if it's not found or
@@ -94,14 +96,34 @@ class Router:
 if __name__ == "__main__":
     # Here are some test cases and expected outputs you can use to test your implementation
 
-     # create the router and add a route
+    # create the router and add a route
     router = Router("root handler")  # remove the 'not found handler' if you did not implement this
     router.add_handler("/home/about", "about handler")  # add a route
 
     # some lookups with the expected output
+    #Base Test case
     print(router.lookup("/"))  # should print 'root handler'
+
+    #Test case 2
     print(router.lookup("/home"))  # should print 'not found handler' or None if you did not implement one
+
     print(router.lookup("/home/about"))  # should print 'about handler'
+
+    #Test case 3 slash handler
     print(router.lookup(
         "/home/about/"))  # should print 'about handler' or None if you did not handle trailing slashes
+
+    #Test case 4 page not found
     print(router.lookup("/home/about/me"))  # should print 'not found handler' or None if you did not implement one
+    print(router.lookup("home/about/007"))
+
+    # add a route
+    router.add_handler("/Newhome/MyProfile", "Hi! This is me!")  # add a route
+
+    print(router.lookup("/Newhome/MyProfile"))
+
+    #Edge case
+    router.add_handler("", "Hi! This is me!")  # add a route
+    # should print the error message
+
+    router.add_handler(5,"This is handler") #should raise a error message

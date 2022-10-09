@@ -19,7 +19,7 @@ def get_min_max(ints):
     if len(ints) == 0:
         return None
     minimum = ints[0]
-    maximum = 0
+    maximum = ints[0]
     for number in ints:
         if number < minimum:
             minimum = number
@@ -33,17 +33,21 @@ if __name__ == "__main__":
     ## Example Test Case of Ten Integers
     import random
 
+    #Test case 1
     l = [i for i in range(0, 10)]  # a list containing 0 - 9
     random.shuffle(l)
     print ("Pass" if ((0, 9) == get_min_max(l)) else "Fail")
 
+    # Test case 2
     l = [random.randint(10,1000) for i in range(10)]
     random.shuffle(l)
     print("Pass" if (min(l),max(l)) == get_min_max(l) else "fail")
 
+    # Test case 3 edge case
     l = [-25,-20,-15,-100,0,2,-999]
     print("Pass" if (min(l), max(l)) == get_min_max(l) else "fail")
 
+    # Test case 4 edge case
     l = []
     output = None
     print("Pass" if output == get_min_max(l) else "Fail")

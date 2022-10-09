@@ -5,19 +5,28 @@
 ---
 ### Complexity Analysis
 
-TC: O(k)
+### TrieNode:
+#### insert method
 
+Time complexity of insert is the same as it's for set method for python dict. So in average case it's O(1), and 
+O(n) in worst case.
 
-SC: O(k)
+Space complexity is constant O(1).
 
+#### suffixes method
 
-m = suffixes found from the prefix.
+Time complexity is O(n), where n is number of children and children of sub_nodes of given node.
 
+Space complexity in worst case is O(n), where n is number of children and children of sub_nodes of given node.
+In the worst case all items we check turns out to be a suffix.
 
-n = total number of suffixes.
+### Trie:
+#### insert method
 
+Time complexity in worst case is O(m * n), where m is number of chars in word and n is number of nodes in trie.
+Space complexity is O(n).
 
-k = total length of all suffixes
+#### find method
 
-
-k = len(prefix) + (len(m1) + len(m2) + len(m3) + ......... len(mn))
+Time complexity in worst case is O(m * n), where m is number of chars in word and n is number of nodes in trie.
+Space complexity is O(n)
