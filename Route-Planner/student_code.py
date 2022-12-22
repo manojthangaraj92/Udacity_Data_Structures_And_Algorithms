@@ -17,7 +17,14 @@ def generate_path(prev, start, goal):
 # new york from reaching one point to the other in city will be like moving in the perfect squares. It is a distance between two points 
 # measured along axes at right angles.
 
-# Since the map loaded here was a straight between the nodes, choosing Euclidean would be the best option.
+# Manhattan distance won't be suitable here as it is not calculating straight line of distance between the two nodes,  since it going along axes to calculate the distance.
+
+# The next distance would be the Diagonal distance measurement, Now this is a direct straight diagonal distance between the two points aof a perfect sqaure,
+# which wont be in this case. This would also lead us to underestimate the calculation of the heuristic function.
+
+# The choice of selection of heuristics fucntion in this case would Euclidean distance, as it is the straight line distance between the two coodrinates.
+
+# Since the map loaded here was a straight between the nodes, choosing Euclidean distance would be the best option.
 
 def euclidean_distance(start, goal):
     distance = sqrt(((start[0] - goal[0]) ** 2) + ((start[1] - goal[1]) ** 2))
