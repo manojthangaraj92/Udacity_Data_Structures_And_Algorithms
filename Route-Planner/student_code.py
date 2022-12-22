@@ -17,10 +17,19 @@ def generate_path(prev, start, goal):
 # new york from reaching one point to the other in city will be like moving in the perfect squares. It is a distance between two points 
 # measured along axes at right angles.
 
+# The manhattan distance would be calculated from the formula,  h = abs (current_cell.x – goal.x) + abs (current_cell.y – goal.y)
+
 # Manhattan distance would only be suitable when we are allowed to move in four directions (right, left, top, bottom).
 
 # The next distance would be the Diagonal distance measurement, Now this is a measurement of either the vertical distance on y axis or the horizontal distance on x-axis. 
 # This tells us about the tru distance like in pythogorous theorem. This is used when it is allowed to move on all 8 directions.
+
+# The diagonal distance would be calculated from the formula, 
+
+#dx = abs(current_cell.x – goal.x)
+#dy = abs(current_cell.y – goal.y)
+#h = D * (dx + dy) + (D2 - 2 * D) * min(dx, dy)
+#where D is length of each node(usually = 1) and D2 is diagonal distance between each node (usually = sqrt(2)). 
 
 # The diagonal distance would be useful when we are allowed to move in eight direction only (similar to move of aking in chess).
 
