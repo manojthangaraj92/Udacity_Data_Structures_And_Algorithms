@@ -17,14 +17,15 @@ def generate_path(prev, start, goal):
 # new york from reaching one point to the other in city will be like moving in the perfect squares. It is a distance between two points 
 # measured along axes at right angles.
 
-# Manhattan distance won't be suitable here as it is not calculating straight line of distance between the two nodes,  since it going along axes to calculate the distance.
+# Manhattan distance would only be suitable when we are allowed to move in four directions (right, left, top, bottom).
 
-# The next distance would be the Diagonal distance measurement, Now this is a direct straight diagonal distance between the two points aof a perfect sqaure,
-# which wont be in this case. This would also lead us to underestimate the calculation of the heuristic function.
+# The next distance would be the Diagonal distance measurement, Now this is a measurement of either the vertical distance on y axis or the horizontal distance on x-axis. 
+# This tells us about the tru distance like in pythogorous theorem. This is used when it is allowed to move on all 8 directions.
 
-# The choice of selection of heuristics fucntion in this case would Euclidean distance, as it is the straight line distance between the two coodrinates.
+# The diagonal distance would be useful when we are allowed to move in eight direction only (similar to move of aking in chess).
 
-# Since the map loaded here was a straight between the nodes, choosing Euclidean distance would be the best option.
+# The A* algorithm is informed search and we need to move in any directions as we want to find the shortest route possible, the right heuristic function would be 
+# Euclidean distance.
 
 def euclidean_distance(start, goal):
     distance = sqrt(((start[0] - goal[0]) ** 2) + ((start[1] - goal[1]) ** 2))
